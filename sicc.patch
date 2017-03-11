@@ -1,0 +1,108 @@
+diff -Nau -x '.*' -EBbw original/Makefile.in sicc/Makefile.in
+--- original/Makefile.in	2017-03-11 11:10:21.000000000 +0800
++++ sicc/Makefile.in	2017-03-11 21:34:50.000000000 +0800
+@@ -281,7 +281,7 @@
+ # print-build-modules in Makefile.am.
+ build_modules = $(both_modules)	# Modules to build
+ dist_modules = $(both_modules)	# Modules to distribute
+-openvswitch_sources = actions.c datapath.c dp_notify.c flow.c \
++openvswitch_sources = sicc.c actions.c datapath.c dp_notify.c flow.c \
+ 	flow_netlink.c flow_table.c vport.c vport-internal_dev.c \
+ 	vport-netdev.c linux/compat/dev-openvswitch.c \
+ 	linux/compat/exthdrs_core.c linux/compat/flex_array.c \
+@@ -298,7 +298,7 @@
+ vport_gre_sources = vport-gre.c
+ vport_lisp_sources = vport-lisp.c
+ vport_stt_sources = vport-stt.c
+-openvswitch_headers = compat.h datapath.h flow.h flow_netlink.h \
++openvswitch_headers = sicc.h compat.h datapath.h flow.h flow_netlink.h \
+ 	flow_table.h vlan.h vport.h vport-internal_dev.h \
+ 	vport-netdev.h vport-vxlan.h linux/compat/gso.h \
+ 	linux/compat/include/linux/percpu.h \
+diff -Nau -x '.*' -EBbw original/Modules.mk sicc/Modules.mk
+--- original/Modules.mk	2017-03-11 11:10:21.000000000 +0800
++++ sicc/Modules.mk	2017-03-11 21:35:11.000000000 +0800
+@@ -17,6 +17,7 @@
+ dist_modules = $(both_modules)	# Modules to distribute
+ 
+ openvswitch_sources = \
++  sicc.c \
+ 	actions.c \
+ 	datapath.c \
+ 	dp_notify.c \
+@@ -34,6 +35,7 @@
+ vport_stt_sources = vport-stt.c
+ 
+ openvswitch_headers = \
++  sicc.h \
+ 	compat.h \
+ 	datapath.h \
+ 	flow.h \
+diff -Nau -x '.*' -EBbw original/actions.c sicc/actions.c
+--- original/actions.c	2017-03-11 11:10:21.000000000 +0800
++++ sicc/actions.c	2017-03-11 21:12:53.000000000 +0800
+@@ -39,6 +39,9 @@
+ #include "gso.h"
+ #include "vlan.h"
+ #include "vport.h"
++/**************** Ahmed ***************/
++#include "vport-netdev.h"
++/**************** Ahmed ***************/
+ 
+ static int do_execute_actions(struct datapath *dp, struct sk_buff *skb,
+ 			      struct sw_flow_key *key,
+@@ -620,7 +623,15 @@
+ 	struct vport *vport = ovs_vport_rcu(dp, out_port);
+ 
+ 	if (likely(vport))
++	{
++		/******************************Ahmed****************************/
++	        struct vport *inp = OVS_CB(skb)->input_vport;
++	        if (inp && vport)
++	            process_packet(skb, inp, vport);
++        /******************************Ahmed****************************/
++		else
+ 		ovs_vport_send(vport, skb);
++	}
+ 	else
+ 		kfree_skb(skb);
+ }
+diff -Nau -x '.*' -EBbw original/datapath.c sicc/datapath.c
+--- original/datapath.c	2017-03-11 11:10:18.000000000 +0800
++++ sicc/datapath.c	2017-03-11 21:36:20.000000000 +0800
+@@ -2272,6 +2272,10 @@
+ 
+ 	pr_info("Open vSwitch switching datapath %s\n", VERSION);
+ 
++	/***************************************Ahmed**************************************/
++    init_sicc();
++    /***************************************Ahmed**************************************/
++
+ 	err = action_fifos_init();
+ 	if (err)
+ 		goto error;
+@@ -2326,6 +2330,9 @@
+ 
+ static void dp_cleanup(void)
+ {
++	/***************************************Ahmed**************************************/
++    cleanup_sicc();
++    /***************************************Ahmed**************************************/
+ 	dp_unregister_genl(ARRAY_SIZE(dp_genl_families));
+ 	ovs_netdev_exit();
+ 	unregister_netdevice_notifier(&ovs_dp_device_notifier);
+diff -Nau -x '.*' -EBbw original/datapath.h sicc/datapath.h
+--- original/datapath.h	2017-03-11 11:10:21.000000000 +0800
++++ sicc/datapath.h	2017-03-11 21:31:05.000000000 +0800
+@@ -32,6 +32,10 @@
+ #include "vlan.h"
+ #include "vport.h"
+ 
++/***********************Ahmed***************************/
++#include "sicc.h"
++/***********************Ahmed***************************/
++
+ #define DP_MAX_PORTS           USHRT_MAX
+ #define DP_VPORT_HASH_BUCKETS  1024
+ 
+Common subdirectories: original/linux and sicc/linux
