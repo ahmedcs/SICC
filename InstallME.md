@@ -15,7 +15,9 @@ patch -p1 < sicc.patch
 
 # OpenvSwitch version
 
-You need to apply the patch that comes along with the source files to the "datapath" subfolder of the OpenVswitch source directory
+You need to apply the patch that comes along with the source files to the "datapath" subfolder of the OpenvSwitch source directory. Notice that, the patch is customized to openvswitch version 2.4.0 and it may/may not work for other versions. If you are applying the patch to a different version, please read the patch file and update manually (few locations is updated).
+
+The patch updates these files: (actions.c, datapath.c, datapath.h, Makefile.in, Module.mk)
 
 Then you need to issue the patch command to patch (actions.c datapath.c, datapath.h, Makefile.in, Module.mk):
 
