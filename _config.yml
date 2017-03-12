@@ -1,4 +1,4 @@
-theme: jekyll-theme-slate
+theme: jekyll-theme-architect
 title: SICC - SDN-based Incast Congestion Control For Data Centers
 description: This project aims at developing an Incast-congestion mitigation framework that leverages rich programmability of SDN and end-host Hypervisor
 author: Ahmed MOHAMED ABDELMONIEM SAYED
