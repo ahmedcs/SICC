@@ -4,7 +4,7 @@ Specifically, it aims at detecting incast in timely manner and achieving coperat
 
 It is implemented as a netwok application running on top of Ryu-Controller as well as a small Patch to OpenvSwitch datapath.
 
-## Installation Guide
+# Installation Guide
 Please Refer to the InstallMe file for more information about installation and possible usage scenarios.
 
 #Feedback
