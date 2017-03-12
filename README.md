@@ -24,7 +24,7 @@ The Copyright of this repository and its subfolders are held exclusively by "Ahm
 
 Any USE or Modification to the (source code, scripts, .., etc) included in this repository has to cite the following PAPERS:  
 
-1- Ahmed M Abdelmoniem, Brahim Bensaou and Amuda James Abu. SICC: SDN-based Incast Congestion Control for Data Centers. To appear in Proceedings of IEEE International
+1- Ahmed M Abdelmoniem, Brahim Bensaou and Amuda James Abu. SICC: SDN-based Incast Congestion Control for Data Centers. In Proceedings of IEEE International
 Conference on Communications (IEEE ICC), Paris, France, May 2017.  
 2- Ahmed M. Abdelmoniem, Brahim Bensaou, and Amuda James Abu. Exploring the Prospects of SDN-based Incast Congestion Control. Annals of Telecommunications, Special Issue on Cloud Communications and Networking, Springer, 2017.  
 
