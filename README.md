@@ -5,7 +5,7 @@ Specifically, it aims at detecting incast in timely manner and achieving coperat
 It is implemented as a netwok application running on top of Ryu-Controller as well as a small Patch to OpenvSwitch datapath.
 
 # Installation Guide
-Please Refer to the InstallMe file for more information about installation and possible usage scenarios.
+Please Refer to the \[[InstallME](InstallME.md)\] file for more information about installation and possible usage scenarios.
 
 #Feedback
 I always welcome and love to have feedback on the program or any possible improvements, please do not hesitate to contact me by commenting on the code or dropping me an email at ahmedcs982@gmail.com.  
@@ -17,7 +17,7 @@ This software will be constantly updated as soon as bugs, fixes and/or optimizat
 # License
 This software including (source code, scripts, .., etc) within this repository and its subfolders are licensed under CRAPL license.
 ```
-Please refer to the LICENSE file for more information
+Please refer to the LICENSE file \[[CRAPL LICENCE](LICENSE)\] for more information
 ```
 
 # CopyRight Notice
@@ -33,6 +33,4 @@ Notice, the COPYRIGHT and/or Author Information notice at the header of the (sou
 ```
 
 # Published Paper
-To understand the framework and proposed solution, please read the paper "SICC: SDN-based Incast Congestion Control for Data Centers" [SICC Paper](download/SICC.pdf)
-
-%[1]:{{ site.url }}/download/SICC.pdf
+To understand the framework and proposed solution, please read the paper "SICC: SDN-based Incast Congestion Control for Data Centers" \[[SICC Paper PDF](download/SICC.pdf)\]
