@@ -31,3 +31,8 @@ Conference on Communications (IEEE ICC), Paris, France, May 2017.
 ```
 Notice, the COPYRIGHT and/or Author Information notice at the header of the (source, header and script) files can not be removed or modified.
 ```
+
+# Published Paper
+To understand the framework and proposed solution, please read the paper "SICC: SDN-based Incast Congestion Control for Data Centers" and [here is possible to download the file in PDF][1]
+
+[1]:{{ site.url }}/download/SICC.pdf
