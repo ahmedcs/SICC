@@ -26,10 +26,11 @@ Any USE or Modification to the (source code, scripts, .., etc) included in this 
 
 1- Ahmed M Abdelmoniem, Brahim Bensaou and Amuda James Abu. SICC: SDN-based Incast Congestion Control for Data Centers. In Proceedings of IEEE International
 Conference on Communications (IEEE ICC), Paris, France, May 2017.  
-2- Ahmed M. Abdelmoniem, Brahim Bensaou, and Amuda James Abu. Exploring the Prospects of SDN-based Incast Congestion Control. Annals of Telecommunications, Special Issue on Cloud Communications and Networking, Springer, 2017. **Invited paper still under preparation.**  
+2-  Ahmed. M. Abdelmoniem and B. Bensaou, “ SICC: SDN-based Incast Congestion Control Framework for Data Centers: Implementation and Evaluation,” Technical. Report. HKUST-CS06-01, HKUST, Hong Kong, 2016.
+3- Ahmed M. Abdelmoniem, Brahim Bensaou, and Amuda James Abu. Exploring the Prospects of SDN-based Incast Congestion Control. Annals of Telecommunications, Special Issue on Cloud Communications and Networking, Springer, 2017. **Invited paper still under preparation.**  
 
 **Notice, the COPYRIGHT and/or Author Information notice at the header of the (source, header and script) files can not be removed or modified.**
 
 
 # Published Paper
-To understand the framework and proposed solution, please read the paper "SICC: SDN-based Incast Congestion Control for Data Centers" \[[SICC Paper PDF](download/SICC.pdf)\]
+To understand the framework and proposed solution, please read the paper "SICC: SDN-based Incast Congestion Control for Data Centers" \[[SICC Paper PDF](download/SICC.pdf)\] and the technical report \[[SICC Tech-Repo PDF](download/SICC-Report.pdf)\]
