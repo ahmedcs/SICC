@@ -8,7 +8,7 @@ It is implemented as a netwok application running on top of Ryu-Controller as we
 Please Refer to the \[[InstallME](InstallME.md)\] file for more information about installation and possible usage scenarios.
 
 #Feedback
-I always welcome and love to have feedback on the program or any possible improvements, please do not hesitate to contact me by commenting on the code [Here](https://ahmedcs.github.io/SICC-post/) or dropping me an email at ahmedcs982@gmail.com. **PS: this is one of the reasons for me to share the software.**  
+I always welcome and love to have feedback on the program or any possible improvements, please do not hesitate to contact me by commenting on the code [Here](https://ahmedcs.github.io/SICC-post/) or dropping me an email at [ahmedcs982@gmail.com](mailto:ahmedcs982@gmail.com). **PS: this is one of the reasons for me to share the software.**  
 
 **This software will be constantly updated as soon as bugs, fixes and/or optimization tricks have been identified.**
 
@@ -20,7 +20,7 @@ This software including (source code, scripts, .., etc) within this repository a
 
 
 # CopyRight Notice
-The Copyright of this repository and its subfolders are held exclusively by "Ahmed Mohamed Abdelmoniem Sayed", for any inquiries contact me at (ahmedcs982@gmail.com).
+The Copyright of this repository and its subfolders are held exclusively by "Ahmed Mohamed Abdelmoniem Sayed", for any inquiries contact me at ([ahmedcs982@gmail.com](mailto:ahmedcs982@gmail.com)).
 
 Any USE or Modification to the (source code, scripts, .., etc) included in this repository has to cite the following PAPERS:  
 
