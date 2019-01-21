@@ -5,9 +5,6 @@ change your current directory to to where the source and Makefile is located the
 ```
 git clone https://github.com/ahmedcs/SICC.git
 cd SICC
-cd KModule/
-make
-cd ..
 cp OvS/* ~/openvswitch-2.4.0/datapath/
 cd ~/openvswitch-2.4.0/datapath/
 patch -p1 < sicc.patch
